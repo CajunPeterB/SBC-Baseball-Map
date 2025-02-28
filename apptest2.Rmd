@@ -1,0 +1,36 @@
+---
+#title: "Sun Belt Conference Baseball Quick Facts"
+output: html_document
+runtime: shiny
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+
+```{r eruptions, message=FALSE, warning=FALSE, include=FALSE}
+source('map.R')
+
+
+```
+
+
+
+```{r tabsets, echo=FALSE, message=FALSE, warning=FALSE}
+girafe(ggobj = ggsf,
+       options = list(
+         opts_selection(css = girafe_css(
+           css = 'opacity:0.0;'
+         )),
+         opts_sizing(rescale = TRUE, width = 1),
+         opts_hover(css = 'opacity:0.0;'),
+         opts_hover_inv(
+           css = girafe_css(
+             css = 'opacity:0.0;'
+           )
+         )))
+
+```
